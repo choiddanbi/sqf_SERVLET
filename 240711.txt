@@ -1,0 +1,38 @@
+Java(TM) Platform SE binary
+
+
+JDK 다운로드 > cmd 에서 java --version이랑 javac --version 확인 > 없으면 > https://www.oracle.com/kr/java/technologies/downloads/#java11 에서 x64 Installer 다운로드
+ 다운로드 후 > 환경변수 등록 (시스템 환경 변수 편집 > 환경변수 > 시스템 변수 > path : JAVA_HOME
+
+
+
+C:\sqf\servlet\workspace 안에 < dvd_server 랑 Servers, .metadata, .gitdonore >
+WEB-INF에 static 폴더 만들고 안에 search_dvd.js 만들고 > HELP > MARKET PLACE에서 ECLIPSE WEB 두번째꺼 설치
+
+
+// SSR 은 jsp 에 있는 코드만 랜더링이지 js 파일을 가자ㅕ와서 랜더링 하는게 아니다!! 
+ > 즉,  search_dvd.js은 외부 접근 가능한 곳에 생성해야한다.
+
+
+크롬(클라이언트) -요청-> 서버(tomcat) -> servlet -> search_dvd.jsp -> 서버(tomcat) -> search_dvd.js -> 크롬 (resp)
+
+
+-> searchText 값을 다시 servlet의 rep 한테 줘 
+-> search_dvd.jsp 
+
+
+req : 요청이 왔기 땜누에 존재 > 클라이언트의 요청 정보가 담긴 객체!
+resp : 응답을 주기 위해 존재
+
+
+<순서>
+servlet -> entity -> dao -> jsp -> js
+
+
+servlet -> jsp -> 
+
+
+
+// do메소드 종류 : doget, dopost, doput, dodelete
+
+C:\sqf\servlet\workspace\dvd_server\src\main\java\com\study\dvd 가 한 프로젝트???????????????
