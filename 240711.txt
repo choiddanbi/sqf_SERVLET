@@ -29,7 +29,7 @@ resp : 응답을 주기 위해 존재
 servlet -> entity -> dao -> jsp -> js
 
 
-servlet -> jsp -> 
+servlet -> jsp -> js -> entity -> dao
 
 
 

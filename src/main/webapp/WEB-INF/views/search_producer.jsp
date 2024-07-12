@@ -3,6 +3,7 @@
 <%@page import="com.study.dvd.dao.ProducerDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,7 +36,7 @@
 	</div>
 	<% 
 		String searchText = request.getParameter("searchText"); // input 에서 입력한 값을 가지고
-		List<Producer> producers = ProducerDao.searchProducerByProducerName(searchText); //제작자를 찾는다
+		List<Producer> producers = ProducerDao.searchProducerByProducerName(searchText); //sql로 일치하는 제작자를 찾는다
 	%>
 	<table>
 		<thead>
@@ -47,15 +48,17 @@
 		<tbody>
 			<% 
 				for(Producer producer : producers) {
+				//producers.forEach(producer -> { 도 가능한데 jsp 에서는 람다식 안ㅁ넉음!!
 			%>
 			
-			<tr>
-				<td><%=producer.getProducerId() %></td>
-				<td><%=producer.getProducerName() %></td>
-			</tr>
+				<tr>
+					<td><%=producer.getProducerId() %></td>
+					<td><%=producer.getProducerName() %></td>
+				</tr>
 			
 			<% 
 				}
+				//});
 			%>
 		</tbody>
 	</table>
